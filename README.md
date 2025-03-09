@@ -30,4 +30,4 @@ Ensure you have the following installed:
 
 ## 🎥 Demo Video
 
-Check out the demo video here: [YouTube Link](https://youtu.be/WHolUDws9eU)
+Check out the demo video here: [YouTube Link](https://youtu.be/p9m2lDGwhKs)
