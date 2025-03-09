@@ -16,7 +16,7 @@ Ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo-url/FreshHarvest.git
+   git clone https://github.com/ragulnathMB/RN_WhatTheFigma.git
    cd FreshHarvest
    ```
 2. Install dependencies:
