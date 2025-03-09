@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container {
+    font-family:'Inter';
+    color: #333;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('/shopheroimg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  height: 720px;
+  animation: scaleBackground 15s infinite alternate ease-in-out;
+}
+
+@keyframes scaleBackground {
+  from { background-position: center; }
+  to { background-position: bottom center; }
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1.5s ease-out;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+  animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.ctaButton {
+  background-color:rgba(0, 0, 0, 1);
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: fadeIn 1.8s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButton:hover {
+  background-color: rgb(59, 59, 59);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:active {
+  transform: translateY(-1px);
+}
+
+/* Main Content */
+.mainContent {
+  padding: 100px;
+}
+
+/* Seasonal Picks Section */
+.seasonalSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 150px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.seasonalSection1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 150px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sectionText {
+  flex: 1;
+  padding: 30px;
+  max-height: 228px;
+  max-width: 516px;
+  transition: transform 0.5s ease;
+}
+
+.seasonalSection:hover .sectionText,
+.seasonalSection1:hover .sectionText {
+  transform: translateX(10px);
+}
+
+.seasonalSection1:hover .sectionText {
+  transform: translateX(-10px);
+}
+
+.sectionText h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.sectionText h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #333;
+  transition: width 0.5s ease;
+}
+
+.sectionText:hover h2::after {
+  width: 50px;
+}
+
+.sectionText p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.seasonalImage {
+  flex: 1;
+  max-height: 400px;
+  max-width: 625px;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+.seasonalImage:hover {
+  transform: scale(1.02);
+}
+
+.seasonalImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s ease;
+}
+
+.seasonalImage:hover img {
+  transform: scale(1.05);
+}
+
+.learnMoreBtn {
+  background: rgba(230, 230, 230, 1);
+  border: none;
+  color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  padding: 12px 24px 12px 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.learnMoreBtn:hover {
+  background: rgb(9, 9, 9);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.learnMoreBtn:active {
+  transform: translateY(0);
+}
+
+.learnMoreBtn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.3s ease;
+}
+
+.learnMoreBtn:hover::after {
+  left: 100%;
+}
+
+/* Best Sellers Section */
+.bestSellersSection {
+  margin: 40px 0;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.bestSellersBox {
+  border: 2px dashed #0099cc;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #f0f9ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bestSellersBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 153, 204, 0.1);
+}
+
+.bestSellersBox h2 {
+  color: #0099cc;
+  margin-bottom: 15px;
+}
+
+.bestSellersBox p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Fresh Selection Section */
+.freshSelectionSection {
+  margin: 40px 0;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.freshSelectionSection h2 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.freshSelectionSection h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #333;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.freshSelectionSection h2:hover::after {
+  transform: scaleX(1);
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 150px;
+}
+
+.featuredProduct {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.featuredProduct:hover {
+  transform: translateY(-5px);
+}
+
+.productImage {
+  height: 735px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.productImage:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.productImage:hover img {
+  transform: scale(1.05);
+}
+
+.productInfo {
+  padding-top: 24px;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.featuredProduct:hover .productInfo {
+  transform: translateY(-5px);
+}
+
+.productInfo h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.productInfo p {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.price {
+  font-weight: bold;
+  color: #4a8a3e;
+  transition: color 0.3s ease;
+}
+
+.featuredProduct:hover .price {
+  color: #3a6e31;
+}
+
+.productCategory {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  transition: transform 0.3s ease;
+}
+
+.productCategory:hover {
+  transform: translateY(-5px);
+}
+
+.productCategoryImage {
+  height: 283.5px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.productCategoryImage:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.productCategoryImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.productCategoryImage:hover img {
+  transform: scale(1.05);
+}
+
+.productCategoryInfo {
+  flex-grow: 1;
+  padding-top: 24px;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.productCategory:hover .productCategoryInfo {
+  transform: translateY(-5px);
+}
+
+.productCategoryInfo h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.productCategoryInfo p {
+  color: #666;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+/* Why Shop With Us Section */
+.whyShopSection {
+  margin: 40px 0;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.whyShopSection h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 600px;
+  position: relative;
+}
+
+.whyShopSection h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #333;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.whyShopSection h2:hover::after {
+  transform: scaleX(1);
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.benefitItem {
+  padding: 20px;
+  border-radius: 5px;
+  font-family: 'Inter';
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.benefitItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.02);
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+
+.benefitItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+}
+
+.benefitItem:hover::before {
+  transform: scaleY(1);
+}
+
+.benefitIcon {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.benefitItem:hover .benefitIcon {
+  transform: translateY(-3px);
+}
+
+.benefitItem h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.benefitItem:hover h3 {
+  color: #333;
+}
+
+.benefitItem p {
+  color: #666;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .seasonalSection {
+    flex-direction: column;
+  }
+  
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+  .productCategory{
+      width: fit-content;
+  }
+  
+  .featuredProduct {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  
+  .mainContent{
+      padding: 10px;
+  }
+  .seasonalSection1{
+      flex-direction: column-reverse;
+  }
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+}

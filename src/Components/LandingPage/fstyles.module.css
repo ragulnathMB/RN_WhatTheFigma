@@ -1,0 +1,173 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #000;
+  margin-bottom: 40px;
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.content {
+  flex: 1;
+  padding-right: 1rem;
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.featureItem {
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1.2s ease-out forwards;
+  animation-delay: calc(var(--animation-order, 0) * 0.1s);
+}
+
+.featureTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.featureText {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+.buttonContainer {
+  display: flex;
+  margin-top: 2rem;
+  gap: 1rem;
+  animation: fadeInUp 1.4s ease-out forwards;
+}
+
+.primaryButton {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulseButton 2s ease-in-out 0.2s 1;
+}
+
+.primaryButton:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+.secondaryButton {
+  background-color: rgba(230, 230, 230, 1);
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulseButton 2s ease-in-out 0.5s 1;
+}
+
+.secondaryButton:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.05);
+}
+
+.imageContainer {
+  margin-top: 2rem;
+  max-width: 704px;
+  max-height: 704px;
+  position: relative;
+  left: 18vw;
+  animation: scaleIn 1.5s ease-out forwards;
+}
+
+.sectionImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.sectionImage:hover {
+  transform: scale(1.02);
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { 
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to { 
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+      opacity: 0;
+      transform: scale(0.95);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes pulseButton {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@media (min-width: 768px) {
+  .container {
+      flex-direction: row;
+      align-items: center;
+      padding: 3rem 2rem;
+  }
+    
+  .content {
+      flex: 1;
+      margin-right: 2rem;
+  }
+    
+  .imageContainer {
+      flex: 1;
+      margin-top: 0;
+  }
+    
+  .buttonContainer {
+      margin-top: 2.5rem;
+  }
+}

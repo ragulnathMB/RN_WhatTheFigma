@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+  }
+  
+  /* Main Product Styles */
+  .mainProduct {
+    display: flex;
+    margin-bottom: 60px;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  
+  .productImage {
+    flex: 1;
+    max-width: 625px;
+    max-height: 613px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .productImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .productInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 515px;
+    max-height: 364px;
+    
+  }
+  
+  .productTitle {
+    font-size: 40px;
+    font-weight: 600;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+  }
+  
+  .productPrice {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+  }
+  
+  .productDescription {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #666;
+    margin: 0 0 25px 0;
+  }
+  
+  .addToCartButton {
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .addToCartButton:hover {
+    background-color: #222;
+  }
+  
+  .productTags {
+    font-size: 16px;
+    color: #777;
+    margin: 10px 0 0 0;
+  }
+  
+  /* Related Products Styles */
+  .relatedSection {
+    margin-top: 40px;
+  }
+  
+  .relatedTitle {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+  }
+  
+  .relatedGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .relatedProduct {
+    margin-bottom: 30px;
+  }
+  
+  .relatedImageContainer {
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    height: 200px;
+  }
+  
+  .relatedImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .relatedProductTitle {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 10px 0 5px 0;
+  }
+  
+  .relatedProductDescription {
+    font-size: 20px;
+    color:rgba(130, 130, 130, 1);
+    margin: 0 0 8px 0;
+  }
+  
+  .relatedProductPrice {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .mainProduct {
+      flex-direction: column;
+    }
+    
+    .productImage {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    .relatedGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .relatedGrid {
+      grid-template-columns: 1fr;
+    }
+  }

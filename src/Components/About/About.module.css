@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Core styles with simple animations */
+.container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 650px;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.textContent {
+  flex: 1;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 64px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #000;
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.subheading {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: rgba(130, 130, 130, 1);
+  padding-bottom: 12px;
+  font-weight: 400;
+  margin-top: 24px;
+  animation: slideUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.bodyText {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 500;
+  animation: slideUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  animation: scaleIn 1.2s ease-out forwards;
+}
+
+.profileImage {
+  max-height: 657px;
+  max-width: 508px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #c4302b;
+}
+
+.contactSection {
+  margin-top: 32px;
+  animation: fadeIn 1s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.contactHeading {
+  font-size: 28px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  animation: slideUp 0.8s ease-out 0.8s forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formRow {
+  display: flex;
+  gap: 16px;
+  animation: slideUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.formRow:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.formRow:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.formRow:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+}
+
+.input, .textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus, .textarea:focus {
+  border-color: #000;
+  outline: none;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 8px;
+  animation: fadeIn 0.8s ease-out 1.6s forwards;
+  opacity: 0;
+}
+
+.submitButton:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.submitButton:active {
+  transform: translateY(1px);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .wrapper {
+    max-width: 100%;
+    order: 2;
+  }
+  
+  .imageContainer {
+    order: 1;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  
+  .profileImage {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .formRow {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
